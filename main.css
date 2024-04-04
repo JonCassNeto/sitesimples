@@ -1,0 +1,74 @@
+/* Definições gerais */
+:root {
+    --green: #00ff00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: Helvetica;
+    background: var(--bg);
+    color: var(--fontColor);
+}
+
+ul {
+    font-family: Helvetica;
+}
+
+/* Estilos para as listas */
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+/* Temas */
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--white);
+}
+
+/* Aplicando tema escuro ao body */
+body.dark-theme {
+    background: var(--bg);
+    color: var(--fontColor);
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    cursor: pointer; /* Adicionado para indicar que é um botão clicável */
+}
+
+.btn:focus {
+    outline-style: none; /* Corrigido o erro de sintaxe para remover o outline */
+}
+/* Botão no tema claro */
+.dark-theme .btn {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+/* Botão no tema escuro */
+.light-theme .btn {
+    color: var(--btnBg);
+    background-color: var(--btnFontColor);
+}
